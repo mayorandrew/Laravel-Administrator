@@ -73,10 +73,13 @@ class Time extends Field {
 	{
 		$time = false;
 		
-		if (empty($input)) {
+		if (empty($input))
+		{
 			$model->{$this->getOption('field_name')} = null;
 			return;
-		} else if( !empty($input) && $input !== '0000-00-00') {
+		}
+		else if (!empty($input) && $input !== '0000-00-00')
+		{
 			$time = new DateTime($input);
 		}
 
